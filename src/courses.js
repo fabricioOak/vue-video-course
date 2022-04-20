@@ -15,6 +15,11 @@ const courses = [
         title: 'First Steps',
         description: 'In this lesson you will see the basic commands of Linux.',
         videoId: 6546540,
+      },
+      {
+        id: 3,
+        title: 'Understanding the Sudo',
+        description: 'Here we will learn how to use the Sudo commands to gain access to the root account.',
       }
     ]
   },
