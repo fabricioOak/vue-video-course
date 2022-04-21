@@ -1,12 +1,13 @@
 <template>
-  <div class="course-page">
+<div class="container-fluid">
+  <div>
     <header>
       <p>
         <router-link :to="{ name: 'Home' }">Back to courses</router-link>
       </p>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
-      <router-link :to="`/courses/${courseId}/lessons/${course.lessons[0].id}`">
+      <router-link class=" btn btn-primary" :to="`/courses/${courseId}/lessons/${course.lessons[0].id}`">
         Start Course
       </router-link>
     </header>
@@ -20,6 +21,8 @@
       :num="index + 1"
     />
   </div>
+</div>
+
 </template>
 
 <script setup>

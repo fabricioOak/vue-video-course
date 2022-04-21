@@ -1,13 +1,17 @@
 <template>
-  <div class="home-page">
-    <header>
-      <h1>Online Course Site</h1>
-    </header>
-    <CourseSummary v-for="course in courses" :key="course.id" :course="course"/>
-  </div>
+	<div class="container py-4">
+		<header class="mb-4 display-4">
+			<h1 class="text-center fw-bold text-uppercase">Online Course Site</h1>
+		</header>
+		<CourseSummary
+			v-for="course in courses"
+			:key="course.id"
+			:course="course"
+		/>
+	</div>
 </template>
 
 <script setup>
-import courses from '../courses';
-import CourseSummary from '../components/CourseSummary.vue';
+import courses from "../courses";
+import CourseSummary from "../components/CourseSummary.vue";
 </script>
