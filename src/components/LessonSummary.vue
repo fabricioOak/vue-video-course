@@ -3,13 +3,13 @@
     <div>
       <div class="title">
         <h2>
-          <router-link :to="`/courses/${courseId}/lessons/${lesson.id}`">
+          <router-link class="text-decoration-none" :to="`/courses/${courseId}/lessons/${lesson.id}`">
             {{ num }}. {{ lesson.title }}
           </router-link>
         </h2>
       </div>
       <p>
-        <router-link :to="`/courses/${courseId}/lessons/${lesson.id}`">
+        <router-link class="text-decoration-none" :to="`/courses/${courseId}/lessons/${lesson.id}`">
           {{ lesson.description }}
         </router-link>
       </p>
