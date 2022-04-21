@@ -20,6 +20,7 @@ const courses = [
         id: 3,
         title: 'Understanding the Sudo',
         description: 'Here we will learn how to use the Sudo commands to gain access to the root account.',
+        videoId: 150991118,
       }
     ]
   },
