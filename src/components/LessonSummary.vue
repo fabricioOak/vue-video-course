@@ -1,7 +1,7 @@
 <template>
-  <section>
-    <div>
-      <div class="title">
+  <section class="container">
+    <div class="border-0 card hover-shadow p-3 mb-3 bg-white rounded">
+      <div>
         <h2>
           <router-link class="text-decoration-none" :to="`/courses/${courseId}/lessons/${lesson.id}`">
             {{ num }}. {{ lesson.title }}

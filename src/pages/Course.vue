@@ -1,27 +1,21 @@
 <template>
-<div class="container-fluid">
-  <div>
-    <header>
-      <p>
-        <router-link :to="{ name: 'Home' }">Back to courses</router-link>
-      </p>
-      <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
-      <router-link class=" btn btn-primary" :to="`/courses/${courseId}/lessons/${course.lessons[0].id}`">
-        Start Course
-      </router-link>
-    </header>
+  <div class="container-fluid">
+    <div class="container my-4">
+      <header>
+        <p>
+          <router-link class="text-decoration-none text-muted" :to="{ name: 'Home' }">Back to courses</router-link>
+        </p>
+        <div>
+          <h1 class="fw-bold">{{ title }}</h1>
+          <h6>{{ description }}</h6>
+        </div>
+      </header>
+    </div>
+    <div>
+      <LessonSummary v-for="(lesson, index) in lessons" :key="index" :course-id="courseId" :lesson="lesson"
+        :num="index + 1" />
+    </div>
   </div>
-  <div>
-    <LessonSummary
-      v-for="(lesson, index) in lessons"
-      :key="index"
-      :course-id="courseId"
-      :lesson="lesson"
-      :num="index + 1"
-    />
-  </div>
-</div>
 
 </template>
 
@@ -34,5 +28,5 @@ const route = useRoute();
 const courseId = route.params.courseId;
 
 const course = courses.find((course) => course.id === parseInt(courseId));
-const { title, lessons } = course;
+const { title, description, lessons } = course;
 </script>
