@@ -3,8 +3,7 @@
 		<div class="card-body">
 			<div>
 				<h2 class="card-title">
-					<router-link :style="{ 'color': randomColor() }" class="text-decoration-none"
-						:to="{ name: 'Course', params: { courseId: course.id } }">
+					<router-link class="text-decoration-none" :to="{ name: 'Course', params: { courseId: course.id } }">
 						{{ course.title }}
 					</router-link>
 				</h2>
@@ -27,11 +26,6 @@ defineProps({
 		required: true,
 	},
 });
-
-const randomColor = () => {
-	let hex = Math.floor(Math.random() * 0xffffff);
-	return "#" + hex.toString(16).padStart(6, "0");
-};
 
 </script>
 
